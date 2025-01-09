@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4530079102341267689}
   - component: {fileID: 6219594896966920319}
+  - component: {fileID: 164774619043145573}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5200675590763633285}
+  - {fileID: 4307208854079437969}
   - {fileID: 8631525670205501253}
   - {fileID: 5226325950642472322}
   - {fileID: 6642109468263791954}
@@ -48,8 +50,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a6ce5a9fecd0448a9dc8f931f5ced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 5200675590763633285}
+  mapSpawnPoint: {fileID: 5200675590763633285}
   mapPrefab: {fileID: 7508661798935165287, guid: 713a03baf0f092d478bca851e211e517, type: 3}
+--- !u!114 &164774619043145573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899091855387701090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b34b04ebd42f774a9d0815be4dd8e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiSpawnPoint: {fileID: 4307208854079437969}
+  uiPrefab: {fileID: 5187454922391276216, guid: 03f2b2499738bb340976ebe1c1fd60a1, type: 3}
 --- !u!1 &4739401202630508344
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +175,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &5057583041631743082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4307208854079437969}
+  m_Layer: 0
+  m_Name: uiSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4307208854079437969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057583041631743082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4530079102341267689}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7452132127003284127
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5200675590763633285}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: mapSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,0 +1,2 @@
+C:\Users\Imisi3DLab\Documents\AB\Unity\DnD\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Imisi3DLab\Documents\AB\Unity\DnD\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

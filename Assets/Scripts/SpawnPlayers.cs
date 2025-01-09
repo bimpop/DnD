@@ -6,6 +6,7 @@ using Oculus.Voice;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class SpawnPlayers : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class SpawnPlayers : MonoBehaviour
     [SerializeField] private UnityEvent onSpawnPlayerCommand;
 
     [SerializeField] private GameObject player;
+    [SerializeField] private TextMeshProUGUI commandText;
     
-    [SerializeField] private TextMeshProUGUI _commandText;
     private Transform _spawnPoint = null;
     private bool _isPlayerSpawned = false;
 
@@ -31,6 +32,8 @@ public class SpawnPlayers : MonoBehaviour
         {
             onMultiValueEvent.AddListener(OnSpawnPlayerCommand);
         }
+        
+        ReactivateVoice();
     }
 
     public void InitialSetup()
@@ -42,7 +45,7 @@ public class SpawnPlayers : MonoBehaviour
     {
         Debug.Log("Assigning GameObjects");
         
-        _commandText = GameObject.FindWithTag("CommandText").GetComponent<TextMeshProUGUI>();
+        commandText = GameObject.FindWithTag("CommandText").GetComponent<TextMeshProUGUI>();
         _spawnPoint = GameObject.FindWithTag("SpawnPoint").transform;
         
         Debug.Log("Assigned GameObjects");
@@ -70,8 +73,10 @@ public class SpawnPlayers : MonoBehaviour
         
         Instantiate(player, _spawnPoint.position, _spawnPoint.rotation);
         
-        _commandText.text = "Spawned Players";
+        commandText.text = "Spawned Players";
         _isPlayerSpawned = true;
+        
+        onSpawnPlayerCommand?.Invoke();
     }
 
     private void ReactivateVoice()
