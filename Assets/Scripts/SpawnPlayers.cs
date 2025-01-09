@@ -13,6 +13,7 @@ public class SpawnPlayers : MonoBehaviour
     [Header("Wit Configuration")]
     [SerializeField] private AppVoiceExperience appVoiceExperience;
     [SerializeField] private WitResponseMatcher witResponseMatcher;
+    // [SerializeField] private GameObject attackResponseMatcher;
     
     [Header("Voice Event")]
     [SerializeField] private UnityEvent onSpawnPlayerCommand;
@@ -77,6 +78,9 @@ public class SpawnPlayers : MonoBehaviour
         _isPlayerSpawned = true;
         
         onSpawnPlayerCommand?.Invoke();
+        
+        // witResponseMatcher.gameObject.SetActive(false);
+        // attackResponseMatcher.SetActive(true);
     }
 
     private void ReactivateVoice()
